@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>Alex Viznytsya - Portfolio</title>
+
+	<!-- Bootstrap core CSS -->
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+		  integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" 
+		  crossorigin="anonymous"
+		  rel="stylesheet">
+
+	<!-- Custom styles for this template -->
+	<link href="css/portfolio-item.css" rel="stylesheet">
+
+	</head>
+
+	<body>
+
+	<!-- Project template -->
+	<div class="col-md-3 col-sm-6 mb-4 proj sm_template">
+	  <a href="#">
+	    <img class="img-fluid" src="" alt="">
+	  </a>
+	</div>
+
+	<!-- Navigation -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+	  <div class="container">
+	    <a class="navbar-brand" href="#">ALEX VIZNYTSYA</a>
+	    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+	      <span class="navbar-toggler-icon"></span>
+	    </button>
+	    <div class="collapse navbar-collapse" id="navbarResponsive">
+	      <ul class="navbar-nav ml-auto">
+	        <li class="nav-item active">
+	          <a class="nav-link" href="#">PROJECTS
+	            <span class="sr-only">(current)</span>
+	          </a>
+	        </li>
+	      </ul>
+	    </div>
+	  </div>
+	</nav>
+
+	<!-- Page Content -->
+	<div class="container">
+
+	  <!-- Portfolio Item Heading -->
+	  <h1 id="proj_name" class="my-4 lg_template"></h1>
+
+	  <!-- Portfolio Item Row -->
+	  <div id="proj_content" class="row lg_template">
+
+	    <div class="col-md-8">
+	      <img id="proj_img" class="img-fluid" src="" alt="">
+	    </div>
+
+	    <div class="col-md-4">
+	      <h3 class="my-3">Project Description</h3>
+	      <p id="proj_desc"></p>
+	      <h3 class="my-3">Project Details</h3>
+	      <ul id="proj_details">
+	      </ul>
+	      <h3 class="my-3">GitHub</h3>
+	      <a id="github_url" href=""></a>
+	    </div>
+
+	  </div>
+	  <!-- /.row -->
+
+	  <!-- Related Projects Row -->
+	  <h3 class="my-4">Select project:</h3>
+
+	  <div id="proj_container" class="row">
+
+	  </div>
+	  <!-- /.row -->
+
+	</div>
+	<!-- /.container -->
+
+	<!-- Footer -->
+	<footer class="py-5 bg-dark">
+	  <div class="container">
+	    <p class="m-0 text-center text-white">Alex Viznytsya 2018</p>
+	  </div>
+	  <!-- /.container -->
+	</footer>
+
+	<!-- Bootstrap core JavaScript -->
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+	        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	        crossorigin="anonymous">
+	</script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" 
+		    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" 
+		    crossorigin="anonymous">
+	</script>
+
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" 
+		    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+		    crossorigin="anonymous">
+	</script>
+
+	<script type="text/javascript">
+
+		var project_data;
+
+		function loadProject(pr) {
+			$("#proj_name").html(pr.name).append($("<small>").text(" " + pr.short_desc));
+			$("#proj_img").attr("src", pr.image_lg_url);
+			$("#proj_desc").html(pr.full_desc);
+			$("#proj_details").text("");
+			$.each(pr.details, function(k, v) {
+				$("#proj_details").append($("<li>").text(v));
+			});
+			$("#github_url").attr("href", pr.git_url);
+			if($("#proj_name").hasClass("lg_template")) {
+				$("#proj_name").removeClass("lg_template");
+				$("#proj_content").removeClass("lg_template");
+			}
+		}
+
+		$(document).ready(function() {
+			$.getJSON("./projects.json", function(data) {
+				project_data = data;
+				$.each(data, function(k, v) {
+					if (v.active) {
+						loadProject(v);
+					}
+					var proj = $(".sm_template").clone();
+					proj.removeClass("sm_template");
+					proj.find("img").attr("src", v.image_sm_url);
+					proj.attr("data-proj", k);
+					$("#proj_container").append(proj);
+				});
+			}).always(function() {
+				$(".proj").on("click", function(e) {
+					loadProject(project_data[$(this).attr("data-proj")]);
+				});
+			});
+		});
+	</script>
+
+	</body>
+
+</html>

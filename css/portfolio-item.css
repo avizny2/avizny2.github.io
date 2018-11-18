@@ -1,0 +1,17 @@
+body {
+  padding-top: 54px;
+}
+
+.sm_template, .lg_template {
+	display:none;
+}
+
+.proj {
+	
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
+}

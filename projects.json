@@ -1,0 +1,41 @@
+[
+	{ "name": "Project 1",
+      "short_desc" : "This is project 1",
+      "git_url" : "https://github.com/avizny2",
+      "image_lg_url" : "http://placehold.it/750x500",
+      "image_sm_url" : "http://placehold.it/500x300",
+      "full_desc" : "This is full description of the project",
+      "details" : ["HTML", "CSS", "IT202"],
+      "active" : 1
+	}, 
+
+	{ "name": "Project 2",
+      "short_desc" : "This is project 2",
+      "git_url" : "https://github.com/avizny2",
+      "image_lg_url" : "http://placehold.it/750x500",
+      "image_sm_url" : "http://placehold.it/500x300",
+      "full_desc" : "This is full description of the project",
+      "details" : ["HTML", "CSS", "IT361"],
+      "active" : 0
+	},
+
+	{ "name": "Project 3",
+      "short_desc" : "This is project 3",
+      "git_url" : "https://github.com/avizny2",
+      "image_lg_url" : "http://placehold.it/750x500",
+      "image_sm_url" : "http://placehold.it/500x300",
+      "full_desc" : "This is full description of the project",
+      "details" : ["HTML", "CSS", "IT361"],
+      "active" : 0
+	},
+
+	{ "name": "Project 4",
+      "short_desc" : "This is project 4",
+      "git_url" : "https://github.com/avizny2",
+      "image_lg_url" : "http://placehold.it/750x500",
+      "image_sm_url" : "http://placehold.it/500x300",
+      "full_desc" : "This is full description of the project",
+      "details" : ["HTML", "CSS", "IT361"],
+      "active" : 0
+	}
+]
