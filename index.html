@@ -27,6 +27,7 @@
 	<div class="col-md-3 col-sm-6 mb-4 proj sm_template">
 	  <a href="#">
 	    <img class="img-fluid" src="" alt="">
+	    <div style="width: 100%; text-align: center; font-size: 1.3em; text-decoration: none;"></div>
 	  </a>
 	</div>
 
@@ -122,7 +123,7 @@
 			$.each(pr.details, function(k, v) {
 				$("#proj_details").append($("<li>").text(v));
 			});
-			$("#github_url").attr("href", pr.git_url);
+			$("#github_url").attr("href", pr.git_url).text(pr.git_url);
 			if($("#proj_name").hasClass("lg_template")) {
 				$("#proj_name").removeClass("lg_template");
 				$("#proj_content").removeClass("lg_template");
@@ -139,6 +140,7 @@
 					var proj = $(".sm_template").clone();
 					proj.removeClass("sm_template");
 					proj.find("img").attr("src", v.image_sm_url);
+					proj.find("div").text(v.name);
 					proj.attr("data-proj", k);
 					$("#proj_container").append(proj);
 				});

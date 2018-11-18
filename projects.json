@@ -1,41 +1,31 @@
 [
-	{ "name": "Project 1",
-      "short_desc" : "This is project 1",
-      "git_url" : "https://github.com/avizny2",
-      "image_lg_url" : "http://placehold.it/750x500",
-      "image_sm_url" : "http://placehold.it/500x300",
-      "full_desc" : "This is full description of the project",
-      "details" : ["HTML", "CSS", "IT202"],
-      "active" : 1
+	{ "name": "Towed Vehicle Tracker",
+      "short_desc" : "Chicago Only",
+      "git_url" : "https://github.com/avizny2/it202-week5-lab",     	
+      "image_lg_url" : "./images/proj1_lg.jpeg",
+      "image_sm_url" : "./images/proj1_sm.jpeg",
+      "full_desc" : "This small appication gets data from Chicago Data Portal about towed vehicles. User can different options to filter request and gets search result in table.",
+      "details" : ["HTML5", "CSS3", "Javascript", "JQuery", "Bootstrap", "JSON"],
+      "active" : 0
 	}, 
 
-	{ "name": "Project 2",
-      "short_desc" : "This is project 2",
-      "git_url" : "https://github.com/avizny2",
-      "image_lg_url" : "http://placehold.it/750x500",
-      "image_sm_url" : "http://placehold.it/500x300",
-      "full_desc" : "This is full description of the project",
-      "details" : ["HTML", "CSS", "IT361"],
-      "active" : 0
+	{ "name": "Simple Scrolling Game",
+      "short_desc" : "Aliens VS Pizza",
+      "git_url" : "https://github.com/avizny2/it202-project2",
+      "image_lg_url" : "./images/proj2_lg.jpeg",
+      "image_sm_url" : "./images/proj2_sm.jpeg",
+      "full_desc" : "This is Javascript scrolling game using canvas element to create animation. Small alien has to collect as mush as possible pizzas and omit dangerous meteorites. With every 3 pizzas game's difficulty become harder and game speed increases.",
+      "details" : ["HTML5", "CSS3", "Javascript", "JQuery"],
+      "active" : 1
 	},
 
-	{ "name": "Project 3",
-      "short_desc" : "This is project 3",
-      "git_url" : "https://github.com/avizny2",
-      "image_lg_url" : "http://placehold.it/750x500",
-      "image_sm_url" : "http://placehold.it/500x300",
-      "full_desc" : "This is full description of the project",
-      "details" : ["HTML", "CSS", "IT361"],
-      "active" : 0
-	},
-
-	{ "name": "Project 4",
-      "short_desc" : "This is project 4",
-      "git_url" : "https://github.com/avizny2",
-      "image_lg_url" : "http://placehold.it/750x500",
-      "image_sm_url" : "http://placehold.it/500x300",
-      "full_desc" : "This is full description of the project",
-      "details" : ["HTML", "CSS", "IT361"],
+	{ "name": "Favorite Chicago Libraries",
+      "short_desc" : " ",
+      "git_url" : "https://github.com/avizny2/it202-project3",
+      "image_lg_url" : "./images/proj3_lg.jpeg",
+      "image_sm_url" : "./images/proj3_sm.jpeg",
+      "full_desc" : "This application show the list of all Chicago Public Libraries. User can select any oh those, and they will be saved to IndexedDB. Also, user can find location of his/her favorites libraries and his/her location.",
+      "details" : ["HTML5", "CSS3","Javascript", "Material Web Components", "JQuery", "Dexie.js", "Google Map API"],
       "active" : 0
 	}
 ]
