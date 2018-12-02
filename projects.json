@@ -16,7 +16,7 @@
       "image_sm_url" : "./images/proj2_sm.jpeg",
       "full_desc" : "This is Javascript scrolling game using canvas element to create animation. Small alien has to collect as mush as possible pizzas and omit dangerous meteorites. With every 3 pizzas game's difficulty become harder and game speed increases.",
       "details" : ["HTML5", "CSS3", "Javascript", "JQuery"],
-      "active" : 1
+      "active" : 0
 	},
 
 	{ "name": "Favorite Chicago Libraries",
@@ -27,5 +27,15 @@
       "full_desc" : "This application show the list of all Chicago Public Libraries. User can select any oh those, and they will be saved to IndexedDB. Also, user can find location of his/her favorites libraries and his/her location.",
       "details" : ["HTML5", "CSS3","Javascript", "Material Web Components", "JQuery", "Dexie.js", "Google Map API"],
       "active" : 0
-	}
+	},
+
+      { "name": "CTA Bus Tracker",
+      "short_desc" : "The Big Project",
+      "git_url" : "https://github.com/avizny2/it202-thebigproject",
+      "image_lg_url" : "./images/proj4_lg.png",
+      "image_sm_url" : "./images/proj4_sm.png",
+      "full_desc" : "This application provides live data of the CTA buses locations based on selected bus stop and bus number. Moreover, user can save his/her favorite bus stops for quick track, change radius of bus stop search based on his/her location, and change frequency of data update on Google Maps. This is PWA application and can be installed on users device and work offline (live data is not available, search by bus number and street cossing only).",
+      "details" : ["HTML5", "CSS3","Javascript", "Material Web Components", "JQuery", "Dexie.js", "Google Map API", "CTA Bus API", "PWA"],
+      "active" : 1
+      }
 ]
